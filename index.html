@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CR18 Barbearia | Sua barbearia em Santo André</title>
+<meta name="description" content="Profissionais qualificados, atendimento personalizado e um ambiente completo para cuidar do seu visual. Agende seu horário na CR18 Barbearia em Santo André.">
+<meta property="og:title" content="CR18 Barbearia | Santo André">
+<meta property="og:description" content="Agende seu horário na CR18 Barbearia em Santo André.">
+<meta property="og:image" content="assets/hero.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="assets/logo-crop.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#000;color:#fff;font-family:'Montserrat',sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#fff;text-decoration:none}
+a:hover{color:#FF4D62}
+@keyframes cr18-marquee{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
+@keyframes cr18-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+</style>
+</helmet>
+
+<div style="background:#000;color:#fff;font-family:'Montserrat',sans-serif;text-align:center;overflow-x:clip">
+
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:{{ navBg }};border-bottom:1px solid {{ navBorder }};box-shadow:{{ navShadow }};backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:background .35s ease, box-shadow .35s ease, border-color .35s ease">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:{{ navPad }}">
+      <a href="#topo" style="display:flex;align-items:center;flex-shrink:0"><img src="assets/logo-crop.png" alt="CR18 Barbearia" style="height:{{ navLogoH }};width:auto;display:block"></a>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex;align-items:center;gap:30px">
+          <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="5">
+            <a href="{{ l.href }}" style="font-size:14px;font-weight:500;color:#D4D7E0;transition:color .2s" style-hover="color:#fff">{{ l.label }}</a>
+          </sc-for>
+        </nav>
+      </sc-if>
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#E8324A;color:#fff;font-weight:700;font-size:{{ navCtaFs }};padding:{{ navCtaPad }};border-radius:999px;white-space:nowrap;transition:background .2s" style-hover="background:#FF4459;color:#fff">{{ navCtaLabel }} <span>→</span></a>
+        <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0">
+            <span style="width:18px;height:2px;background:#fff;border-radius:2px"></span>
+            <span style="width:18px;height:2px;background:#fff;border-radius:2px"></span>
+            <span style="width:18px;height:2px;background:#fff;border-radius:2px"></span>
+          </button>
+        </sc-if>
+      </div>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <nav style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 20px 22px;background:#0B1440;border-top:1px solid rgba(255,255,255,.08)">
+        <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="5">
+          <a href="{{ l.href }}" onClick="{{ closeMenu }}" style="width:100%;padding:14px 0;font-size:16px;font-weight:600;color:#fff;border-bottom:1px solid rgba(255,255,255,.06)">{{ l.label }}</a>
+        </sc-for>
+      </nav>
+    </sc-if>
+  </header>
+
+  <section id="topo" data-screen-label="01 Hero" style="position:relative;min-height:{{ heroMinH }};display:flex;align-items:center;justify-content:center;padding:{{ heroPad }};overflow:hidden">
+    <img data-hero-bg="" src="assets/hero.jpg" alt="Ambiente da CR18 Barbearia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.55) 35%,rgba(0,0,0,.78) 72%,#000 100%)"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 55%,rgba(20,40,120,.35),transparent 70%)"></div>
+    <div style="position:relative;max-width:900px;display:flex;flex-direction:column;align-items:center;gap:{{ heroGap }}">
+      <img data-reveal="0" src="assets/logo-crop.png" alt="CR18 Barbearia" style="width:clamp(130px,16vw,200px);height:auto;display:block;margin-bottom:4px">
+      <p data-reveal="100" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#fff;opacity:.85">Barbearia · Santo André — SP</p>
+      <h1 data-reveal="200" style="margin:0;font-size:clamp(40px,7.2vw,88px);font-weight:800;line-height:1.02;letter-spacing:-.035em;text-wrap:balance">Sua barbearia em <span style="color:#E8324A">Santo André.</span></h1>
+      <p data-reveal="300" style="margin:0;max-width:620px;font-size:clamp(16px,1.6vw,19px);line-height:1.65;color:#D4D7E0;text-wrap:pretty">Na CR18, você encontra profissionais qualificados, atendimento personalizado e um ambiente completo para cuidar do seu visual.</p>
+      <div data-reveal="400" style="margin-top:10px">
+        <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Vídeos" style="position:relative;padding:0 0 clamp(72px,9vw,120px)">
+    <div data-reveal="0" style="position:relative">
+      {{ marquee }}
+      <div style="position:absolute;inset:0 auto 0 0;width:clamp(30px,10vw,160px);background:linear-gradient(90deg,#000,transparent);pointer-events:none"></div>
+      <div style="position:absolute;inset:0 0 0 auto;width:clamp(30px,10vw,160px);background:linear-gradient(270deg,#000,transparent);pointer-events:none"></div>
+    </div>
+  </section>
+
+  <section id="diferenciais" data-screen-label="02 Diferenciais" style="padding:0 clamp(8px,2vw,24px)">
+    <div style="border-radius:clamp(28px,4vw,48px);background:radial-gradient(120% 70% at 50% 0%,#15298a 0%,#0a1440 38%,#05070f 78%);border:1px solid rgba(255,255,255,.06);padding:clamp(64px,9vw,120px) clamp(16px,4vw,56px)">
+      <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
+        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Diferenciais</p>
+        <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Mais que um corte. <span style="color:#FF4D62">Uma experiência completa.</span></h2>
+        <div data-reveal="150" style="display:flex;gap:5px;margin:4px 0"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
+        <p data-reveal="200" style="margin:0;max-width:560px;font-size:17px;line-height:1.65;color:#C4C9D8;text-wrap:pretty">Conheça os diferenciais que fazem da CR18 a escolha certa para cuidar do seu visual.</p>
+      </div>
+      <div style="max-width:1180px;margin:clamp(40px,6vw,72px) auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px">
+        <div data-reveal="0" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)">
+          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,77,98,.55);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#FF4D62">01</span>
+          <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.25">Profissionais qualificados</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Uma equipe preparada para entregar cortes bem executados, com atenção aos detalhes e ao seu estilo.</p>
+        </div>
+        <div data-reveal="100" style="border-radius:28px;overflow:hidden;min-height:360px;position:relative;border:1px solid rgba(255,255,255,.09)">
+          <img src="assets/f7.jpg" alt="Corte com desenho na CR18" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%">
+        </div>
+        <div data-reveal="200" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)">
+          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,77,98,.55);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#FF4D62">02</span>
+          <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.25">Ambiente confortável e climatizado</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Um espaço moderno, aconchegante e familiar, pensado para você aproveitar cada visita.</p>
+        </div>
+        <div data-reveal="0" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)">
+          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,77,98,.55);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#FF4D62">03</span>
+          <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.25">Atendimento personalizado</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Do agendamento à finalização, cada detalhe é pensado para oferecer praticidade e uma ótima experiência.</p>
+        </div>
+        <div data-reveal="100" style="border-radius:28px;overflow:hidden;min-height:360px;position:relative;border:1px solid rgba(255,255,255,.09)">
+          <img src="assets/f1.jpg" alt="Cliente após o corte na CR18" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%">
+        </div>
+        <div data-reveal="200" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:linear-gradient(165deg,rgba(232,50,74,.16),rgba(255,255,255,.03));border:1px solid rgba(255,77,98,.3)">
+          <span style="width:46px;height:46px;border-radius:50%;background:#E8324A;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff">✓</span>
+          <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.25">Cuidado até o último detalhe</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#C9CEDB;text-wrap:pretty">Aqui, todo corte inclui a lavagem dos cabelos ao final do atendimento, para você sair pronto para qualquer ocasião.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" data-screen-label="03 Sobre" style="padding:clamp(80px,11vw,150px) 20px">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(40px,6vw,80px)">
+      <div style="flex:1 1 420px;max-width:560px;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div data-reveal="0" style="border-radius:28px;overflow:hidden;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.09)"><img src="assets/f2.jpg" alt="Corte masculino CR18" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div data-reveal="150" style="border-radius:28px;overflow:hidden;aspect-ratio:3/4;margin-top:clamp(32px,5vw,64px);border:1px solid rgba(255,255,255,.09)"><img src="assets/f4.jpg" alt="Degradê com desenho CR18" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+      <div style="flex:1 1 380px;max-width:520px;display:flex;flex-direction:column;align-items:center;gap:20px">
+        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Sobre a CR18</p>
+        <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.4vw,52px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Conheça a CR18 Barbearia</h2>
+        <div data-reveal="150" style="display:flex;gap:5px"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
+        <p data-reveal="200" style="margin:0;font-size:17px;line-height:1.7;color:#C4C9D8;text-wrap:pretty">Localizada em Santo André, a CR18 une profissionais qualificados, atendimento de excelência e um ambiente pensado para proporcionar conforto em cada visita.</p>
+        <p data-reveal="250" style="margin:0;font-size:17px;line-height:1.7;color:#fff;font-weight:600;text-wrap:pretty">Mais do que cuidar do seu cabelo e da sua barba, nosso compromisso é oferecer uma experiência que faça você querer voltar.</p>
+        <div data-reveal="300" style="margin-top:8px">
+          <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.32);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" data-screen-label="04 Serviços" style="padding:0 20px clamp(80px,11vw,150px)">
+    <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
+      <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Nossos serviços</p>
+      <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Seu estilo merece <span style="color:#FF4D62">o cuidado certo.</span></h2>
+      <div data-reveal="150" style="display:flex;gap:5px;margin-top:4px"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
+    </div>
+    <div style="max-width:1180px;margin:clamp(40px,6vw,64px) auto 0;display:flex;flex-wrap:wrap;gap:16px">
+      <div data-reveal="0" style="flex:2 1 520px;display:flex;flex-wrap:wrap;border-radius:32px;overflow:hidden;background:linear-gradient(160deg,#16297a 0%,#0a1236 55%,#06080f 100%);border:1px solid rgba(43,80,216,.45)">
+        <div style="flex:1 1 240px;min-height:300px;position:relative"><img src="assets/f5.jpg" alt="Corte masculino" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%"></div>
+        <div style="flex:1 1 260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:44px 32px">
+          <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#9AA6D6">01</span>
+          <h3 style="margin:0;font-size:clamp(24px,2.6vw,32px);font-weight:800;letter-spacing:-.02em">Corte masculino</h3>
+          <span style="width:40px;height:3px;background:#E8324A;border-radius:2px"></span>
+          <p style="margin:0;font-size:16px;line-height:1.65;color:#C9D0E6;text-wrap:pretty">Do clássico ao moderno, cortes executados com precisão e personalizados para o seu estilo.</p>
+        </div>
+      </div>
+      <div data-reveal="150" style="flex:1 1 300px;display:flex;flex-direction:column;border-radius:32px;overflow:hidden;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
+        <div style="height:220px;position:relative"><img src="assets/f3.jpg" alt="Barba" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%"></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:32px 28px 36px">
+          <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#8A90A2">02</span>
+          <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Barba</h3>
+          <span style="width:40px;height:3px;background:#E8324A;border-radius:2px"></span>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Cuidado e acabamento para manter sua barba sempre alinhada.</p>
+        </div>
+      </div>
+      <div data-reveal="0" style="flex:1 1 280px;display:flex;flex-direction:column;align-items:center;gap:14px;padding:40px 28px;border-radius:32px;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
+        <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#8A90A2">03</span>
+        <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Sobrancelha</h3>
+        <span style="width:40px;height:3px;background:#E8324A;border-radius:2px"></span>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Mais definição e harmonia para o seu visual.</p>
+      </div>
+      <div data-reveal="100" style="flex:1 1 280px;display:flex;flex-direction:column;align-items:center;gap:14px;padding:40px 28px;border-radius:32px;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
+        <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#8A90A2">04</span>
+        <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Tratamentos capilares</h3>
+        <span style="width:40px;height:3px;background:#E8324A;border-radius:2px"></span>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Progressiva, hidratação e selagem para cuidar da aparência e do acabamento dos fios.</p>
+      </div>
+      <div data-reveal="200" style="flex:1 1 280px;display:flex;flex-direction:column;align-items:center;gap:14px;padding:40px 28px;border-radius:32px;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
+        <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#8A90A2">05</span>
+        <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Cuidados complementares</h3>
+        <span style="width:40px;height:3px;background:#E8324A;border-radius:2px"></span>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Depilação nasal e das orelhas para uma finalização ainda mais completa.</p>
+      </div>
+    </div>
+    <div data-reveal="0" style="margin-top:40px">
+      <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.32);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+    </div>
+  </section>
+
+  <section id="combos" data-screen-label="05 Combos" style="padding:0 20px clamp(80px,11vw,150px)">
+    <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
+      <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Combos CR18</p>
+      <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.6vw,54px);font-weight:800;line-height:1.06;letter-spacing:-.03em;text-wrap:balance">Mais cuidados para o seu visual. <span style="color:#FF4D62">Preços especiais para você.</span></h2>
+      <p data-reveal="200" style="margin:0;max-width:560px;font-size:17px;line-height:1.65;color:#C4C9D8;text-wrap:pretty">Conheça nossos combos e aproveite diferentes serviços em um único atendimento.</p>
+    </div>
+    <div style="max-width:1200px;margin:clamp(40px,6vw,64px) auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:18px">
+      <div data-reveal="0" style="flex:1 1 300px;max-width:384px;display:flex;flex-direction:column;align-items:center;gap:20px;padding:40px 28px 32px;border-radius:32px;background:linear-gradient(165deg,#1a2f8c 0%,#0b1440 50%,#06080f 100%);border:1px solid rgba(43,80,216,.6);box-shadow:0 30px 70px rgba(20,40,140,.35)">
+        <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#9AA6D6">01</span>
+        <h3 style="margin:0;font-size:28px;font-weight:800;letter-spacing:-.02em">Combo Black</h3>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px">
+          <span style="font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)">Progressiva</span>
+          <span style="font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)">Máscara Black</span>
+          <span style="font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)">Corte de Cabelo</span>
+          <span style="font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)">Sobrancelha</span>
+        </div>
+        <div style="width:100%;height:1px;background:rgba(255,255,255,.12);margin-top:auto"></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <span style="font-size:14px;color:#AEB6D6">De <s>R$ 190,90</s> por</span>
+          <span style="font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.1">R$ 169,90</span>
+          <span style="margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;color:#fff;background:#E8324A;padding:6px 12px;border-radius:999px">Economize R$ 21,00</span>
+        </div>
+        <a href="{{ waBlack }}" target="_blank" rel="noopener" style="width:100%;display:flex;justify-content:center;align-items:center;gap:10px;background:#E8324A;color:#fff;font-weight:700;font-size:15px;padding:18px 24px;border-radius:999px;transition:background .2s" style-hover="background:#FF4459;color:#fff">Agendar meu combo <span>→</span></a>
+      </div>
+      <sc-for list="{{ combos }}" as="c" hint-placeholder-count="4">
+        <div data-reveal="{{ c.delay }}" style="flex:1 1 300px;max-width:384px;display:flex;flex-direction:column;align-items:center;gap:20px;padding:40px 28px 32px;border-radius:32px;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
+          <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#8A90A2">{{ c.n }}</span>
+          <h3 style="margin:0;font-size:28px;font-weight:800;letter-spacing:-.02em">{{ c.name }}</h3>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px">
+            <sc-for list="{{ c.items }}" as="it" hint-placeholder-count="4">
+              <span style="font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)">{{ it }}</span>
+            </sc-for>
+          </div>
+          <div style="width:100%;height:1px;background:rgba(255,255,255,.1);margin-top:auto"></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+            <span style="font-size:14px;color:#9AA0B2">De <s>R$ {{ c.de }}</s> por</span>
+            <span style="font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.1">R$ {{ c.por }}</span>
+            <span style="margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;color:#FF6375;background:rgba(232,50,74,.14);padding:6px 12px;border-radius:999px">Economize R$ {{ c.save }}</span>
+          </div>
+          <a href="{{ c.wa }}" target="_blank" rel="noopener" style="width:100%;display:flex;justify-content:center;align-items:center;gap:10px;background:transparent;color:#fff;font-weight:700;font-size:15px;padding:17px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.28);transition:background .2s, border-color .2s" style-hover="background:#E8324A;border-color:#E8324A;color:#fff">Agendar meu combo <span>→</span></a>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="planos" data-screen-label="06 Planos" style="padding:0 clamp(8px,2vw,24px) clamp(80px,11vw,150px)">
+    <div style="position:relative;overflow:hidden;border-radius:clamp(28px,4vw,48px);background:radial-gradient(90% 60% at 50% 110%,rgba(232,50,74,.35),transparent 60%),radial-gradient(110% 70% at 50% 0%,#15298a 0%,#0a1440 40%,#05070f 80%);border:1px solid rgba(255,255,255,.06);padding:clamp(64px,9vw,120px) 20px">
+      <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px">
+        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Planos de assinatura</p>
+        <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Seu visual em dia o mês inteiro.</h2>
+        <p data-reveal="200" style="margin:0;max-width:580px;font-size:17px;line-height:1.65;color:#C4C9D8;text-wrap:pretty">Conheça os planos de assinatura da CR18 e tenha mais praticidade para manter seu corte e sua barba sempre alinhados.</p>
+        <div data-reveal="300" style="width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;gap:10px;margin:18px 0 6px">
+          <span style="font-size:clamp(72px,11vw,120px);font-weight:900;letter-spacing:-.05em;line-height:1">10%</span>
+          <div style="width:100%;height:2px;background:rgba(255,255,255,.12);position:relative"><div style="position:absolute;left:0;top:0;bottom:0;width:62%;background:linear-gradient(90deg,#E8324A,#fff 55%,#2B50D8)"></div></div>
+          <p style="margin:6px 0 0;font-size:16px;line-height:1.55;color:#fff;font-weight:600;text-wrap:balance">de desconto em produtos e serviços adicionais para assinantes</p>
+          <p style="margin:0;font-size:13px;color:#9AA0B8">Conforme as condições do plano.</p>
+        </div>
+        <div data-reveal="400" style="margin-top:10px">
+          <a href="{{ waPlanos }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Conhecer os planos <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="07 Chamada final" style="padding:0 clamp(8px,2vw,24px) clamp(64px,8vw,100px)">
+    <div style="position:relative;overflow:hidden;border-radius:clamp(28px,4vw,48px);min-height:clamp(440px,60vw,620px);display:flex;align-items:center;justify-content:center;padding:80px 20px;border:1px solid rgba(255,255,255,.06)">
+      <img src="assets/hero.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.82))"></div>
+      <div style="position:relative;max-width:760px;display:flex;flex-direction:column;align-items:center;gap:20px">
+        <div data-reveal="0" style="display:flex;gap:5px"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
+        <h2 data-reveal="100" style="margin:0;font-size:clamp(34px,6vw,72px);font-weight:800;line-height:1.03;letter-spacing:-.035em;text-wrap:balance">Seu próximo corte é na <span style="color:#E8324A">CR18.</span></h2>
+        <p data-reveal="200" style="margin:0;max-width:560px;font-size:18px;line-height:1.65;color:#D4D7E0;text-wrap:pretty">Agende seu horário e conheça uma experiência de barbearia diferenciada em Santo André.</p>
+        <div data-reveal="300" style="margin-top:10px">
+          <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Rodapé" style="border-top:1px solid rgba(255,255,255,.08);padding:64px 20px 40px">
+    <div style="max-width:600px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px">
+      <img src="assets/logo-crop.png" alt="CR18 Barbearia" style="width:150px;height:auto;display:block;margin-bottom:8px">
+      <p style="margin:0;font-size:18px;font-weight:700">CR18 Barbearia</p>
+      <p style="margin:0;font-size:15px;color:#B4BACB">Seu estilo, nosso compromisso.</p>
+      <p style="margin:0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8A90A2">Santo André — SP</p>
+      <a href="{{ appUrl }}" target="_blank" rel="noopener" style="margin-top:14px;display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:15px;padding:17px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.28);transition:background .2s, border-color .2s" style-hover="background:#E8324A;border-color:#E8324A;color:#fff">Agendar pelo aplicativo <span>→</span></a>
+      <p style="margin:36px 0 0;font-size:12px;color:#6E7486">© 2026 CR18 Barbearia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511954628549&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;appUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:45,&quot;min&quot;:15,&quot;max&quot;:120,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animação&quot;},&quot;animations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Animação&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, w: typeof window !== 'undefined' ? window.innerWidth : 1200, menuOpen: false };
+  wa(msg) {
+    const n = String(this.props.whatsapp ?? '5511954628549').replace(/\D/g, '');
+    return `https://wa.me/${n}?text=${encodeURIComponent(msg)}`;
+  }
+  buildMarquee(speed) {
+    const h = React.createElement;
+    const card = (n, k) => h('div', { key: k, style: { flex: '0 0 auto', width: 'clamp(170px,20vw,250px)', aspectRatio: '9/16', marginRight: 16, borderRadius: 24, overflow: 'hidden', background: '#0b0b10', border: '1px solid rgba(255,255,255,.09)' } },
+      h('video', { src: `assets/videos/v${n}.mp4`, autoPlay: true, loop: true, playsInline: true, muted: true, preload: 'auto',
+        ref: el => { if (el && !el._cr) { el._cr = 1; el.muted = true; el.defaultMuted = true; el.setAttribute('muted', ''); const p = el.play && el.play(); p && p.catch && p.catch(() => {}); } },
+        style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block', pointerEvents: 'none' } }));
+    const items = [];
+    for (let s = 0; s < 3; s++) for (let n = 1; n <= 6; n++) items.push(card(n, s + '-' + n));
+    return h('div', { style: { overflow: 'hidden', width: '100%' } },
+      h('div', { style: { display: 'flex', width: 'max-content', animation: `cr18-marquee ${speed}s linear infinite` } }, items));
+  }
+  componentDidMount() {
+    this.onScroll = () => { const s = Math.max(window.scrollY || 0, document.documentElement.scrollTop || 0, document.body.scrollTop || 0) > 24; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    this.onResize = () => this.setState({ w: window.innerWidth, menuOpen: window.innerWidth < 900 && this.state.menuOpen });
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    document.body.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    this.onScroll();
+    const bg = document.querySelector('[data-hero-bg]');
+    if (bg) { bg.style.transform = 'scale(1.12)'; requestAnimationFrame(() => requestAnimationFrame(() => { bg.style.transition = 'transform 3s cubic-bezier(.2,.7,.2,1)'; bg.style.transform = 'scale(1)'; })); }
+    if ((this.props.animations ?? true) && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); }
+      }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      this.io = io;
+      setTimeout(() => document.querySelectorAll('[data-reveal]').forEach(el => {
+        const d = parseInt(el.getAttribute('data-reveal') || '0', 10) || 0;
+        el.style.opacity = '0'; el.style.transform = 'translateY(36px)';
+        el.style.transition = `opacity .9s cubic-bezier(.2,.7,.2,1) ${d}ms, transform .9s cubic-bezier(.2,.7,.2,1) ${d}ms`;
+        io.observe(el);
+      }), 0);
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); document.body.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
+  renderVals() {
+    const speed = this.props.marqueeSpeed ?? 45;
+    if (this._speed !== speed) { this._speed = speed; this._marquee = this.buildMarquee(speed); }
+    const raw = [
+      ['02', 'Combo Premium', 'Cabelo + Selagem + Depilação Nasal + Sobrancelha', '180,00', '149,90'],
+      ['03', 'Combo Super Clean', 'Cabelo + Depilação Nasal + Sobrancelha + Depilação de Orelha', '120,90', '99,90'],
+      ['04', 'Combo Elite', 'Corte + Barba + Hidratação + Sobrancelha + Depilação Nasal', '165,90', '139,90'],
+      ['05', 'Combo Renova', 'Corte + Hidratação + Selagem', '165,00', '150,00'],
+    ];
+    const mob = this.state.w < 900;
+    const solid = this.state.scrolled || this.state.menuOpen;
+    const num = s => parseFloat(s.replace(',', '.'));
+    const combos = raw.map(([n, name, items, de, por], i) => ({
+      n, name, de, por, delay: String((i % 3) * 120 + 120),
+      items: items.split(' + '),
+      save: (num(de) - num(por)).toFixed(2).replace('.', ','),
+      wa: this.wa(`Olá! Quero agendar o ${name} na CR18.`),
+    }));
+    return {
+      marquee: this._marquee,
+      isDesktop: !mob, isMobile: mob, menuOpen: mob && this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      navLinks: [{ label: 'Diferenciais', href: '#diferenciais' }, { label: 'Sobre', href: '#sobre' }, { label: 'Serviços', href: '#servicos' }, { label: 'Combos', href: '#combos' }, { label: 'Planos', href: '#planos' }],
+      navBg: solid ? 'rgba(11,20,64,.94)' : 'transparent',
+      navBorder: solid ? 'rgba(255,255,255,.08)' : 'transparent',
+      navShadow: solid ? '0 10px 30px rgba(0,0,0,.45)' : 'none',
+      navPad: mob ? '12px 16px' : (this.state.scrolled ? '14px 24px' : '22px 24px'),
+      navLogoH: mob ? '28px' : '34px',
+      navCtaLabel: mob ? 'Agendar' : 'Agendar horário',
+      navCtaFs: mob ? '14px' : '15px',
+      navCtaPad: mob ? '12px 18px' : '14px 24px',
+      heroMinH: mob ? 'auto' : '100svh',
+      heroPad: mob ? '96px 20px 36px' : '140px 20px 96px',
+      heroGap: mob ? '16px' : '22px',
+      waMain: this.wa('Olá! Gostaria de agendar um horário na CR18 Barbearia.'),
+      waBlack: this.wa('Olá! Quero agendar o Combo Black na CR18.'),
+      waPlanos: this.wa('Olá! Quero conhecer os planos de assinatura da CR18.'),
+      appUrl: this.props.appUrl || '#',
+      combos,
+    };
+  }
+}
+</script>
+</body>
+</html>
