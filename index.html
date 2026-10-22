@@ -4,9 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CR18 Barbearia | Sua barbearia em Santo André</title>
-<meta name="description" content="Profissionais qualificados, atendimento personalizado e um ambiente completo para cuidar do seu visual. Agende seu horário na CR18 Barbearia em Santo André.">
+<meta name="description" content="Profissionais qualificados, atendimento personalizado e um ambiente completo para cuidar do seu visual. Unidades Itamarati e Nações em Santo André.">
 <meta property="og:title" content="CR18 Barbearia | Santo André">
-<meta property="og:description" content="Agende seu horário na CR18 Barbearia em Santo André.">
 <meta property="og:image" content="hero.jpg">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="logo-crop.png">
@@ -22,7 +21,7 @@
 html,body{margin:0;padding:0;background:#000;color:#fff;font-family:'Montserrat',sans-serif;-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box}
 a{color:#fff;text-decoration:none}
-a:hover{color:#FF4D62}
+a:hover{color:#5B8CFF}
 @keyframes cr18-marquee{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
 @keyframes cr18-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
 </style>
@@ -41,7 +40,7 @@ a:hover{color:#FF4D62}
         </nav>
       </sc-if>
       <div style="display:flex;align-items:center;gap:10px">
-        <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#E8324A;color:#fff;font-weight:700;font-size:{{ navCtaFs }};padding:{{ navCtaPad }};border-radius:999px;white-space:nowrap;transition:background .2s" style-hover="background:#FF4459;color:#fff">{{ navCtaLabel }} <span>→</span></a>
+        <a href="#agendar" onClick="{{ openMain }}" style="display:inline-flex;align-items:center;gap:8px;background:#E8324A;color:#fff;font-weight:700;font-size:{{ navCtaFs }};padding:{{ navCtaPad }};border-radius:999px;white-space:nowrap;transition:background .2s" style-hover="background:#FF4459;color:#fff">{{ navCtaLabel }} <span>→</span></a>
         <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
           <button onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0">
             <span style="width:18px;height:2px;background:#fff;border-radius:2px"></span>
@@ -67,10 +66,10 @@ a:hover{color:#FF4D62}
     <div style="position:relative;max-width:900px;display:flex;flex-direction:column;align-items:center;gap:{{ heroGap }}">
       <img data-reveal="0" src="logo-crop.png" alt="CR18 Barbearia" style="width:clamp(130px,16vw,200px);height:auto;display:block;margin-bottom:4px">
       <p data-reveal="100" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#fff;opacity:.85">Barbearia · Santo André — SP</p>
-      <h1 data-reveal="200" style="margin:0;font-size:clamp(40px,7.2vw,88px);font-weight:800;line-height:1.02;letter-spacing:-.035em;text-wrap:balance">Sua barbearia em <span style="color:#E8324A">Santo André.</span></h1>
+      <h1 data-reveal="200" style="margin:0;font-size:clamp(40px,7.2vw,88px);font-weight:800;line-height:1.02;letter-spacing:-.035em;text-wrap:balance">Sua barbearia em <span style="color:#5B8CFF">Santo André.</span></h1>
       <p data-reveal="300" style="margin:0;max-width:620px;font-size:clamp(16px,1.6vw,19px);line-height:1.65;color:#D4D7E0;text-wrap:pretty">Na CR18, você encontra profissionais qualificados, atendimento personalizado e um ambiente completo para cuidar do seu visual.</p>
       <div data-reveal="400" style="margin-top:10px">
-        <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+        <a href="#agendar" onClick="{{ openMain }}" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
       </div>
     </div>
   </section>
@@ -86,14 +85,14 @@ a:hover{color:#FF4D62}
   <section id="diferenciais" data-screen-label="02 Diferenciais" style="padding:0 clamp(8px,2vw,24px)">
     <div style="border-radius:clamp(28px,4vw,48px);background:radial-gradient(120% 70% at 50% 0%,#15298a 0%,#0a1440 38%,#05070f 78%);border:1px solid rgba(255,255,255,.06);padding:clamp(64px,9vw,120px) clamp(16px,4vw,56px)">
       <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
-        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Diferenciais</p>
-        <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Mais que um corte. <span style="color:#FF4D62">Uma experiência completa.</span></h2>
+        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#5B8CFF">Diferenciais</p>
+        <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Mais que um corte. <span style="color:#5B8CFF">Uma experiência completa.</span></h2>
         <div data-reveal="150" style="display:flex;gap:5px;margin:4px 0"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
         <p data-reveal="200" style="margin:0;max-width:560px;font-size:17px;line-height:1.65;color:#C4C9D8;text-wrap:pretty">Conheça os diferenciais que fazem da CR18 a escolha certa para cuidar do seu visual.</p>
       </div>
       <div style="max-width:1180px;margin:clamp(40px,6vw,72px) auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px">
         <div data-reveal="0" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)">
-          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,77,98,.55);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#FF4D62">01</span>
+          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(91,140,255,.6);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#5B8CFF">01</span>
           <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.25">Profissionais qualificados</h3>
           <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Uma equipe preparada para entregar cortes bem executados, com atenção aos detalhes e ao seu estilo.</p>
         </div>
@@ -101,12 +100,12 @@ a:hover{color:#FF4D62}
           <img src="f7.jpg" alt="Corte com desenho na CR18" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%">
         </div>
         <div data-reveal="200" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)">
-          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,77,98,.55);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#FF4D62">02</span>
+          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(91,140,255,.6);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#5B8CFF">02</span>
           <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.25">Ambiente confortável e climatizado</h3>
           <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Um espaço moderno, aconchegante e familiar, pensado para você aproveitar cada visita.</p>
         </div>
         <div data-reveal="0" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)">
-          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,77,98,.55);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#FF4D62">03</span>
+          <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(91,140,255,.6);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#5B8CFF">03</span>
           <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.25">Atendimento personalizado</h3>
           <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Do agendamento à finalização, cada detalhe é pensado para oferecer praticidade e uma ótima experiência.</p>
         </div>
@@ -129,13 +128,13 @@ a:hover{color:#FF4D62}
         <div data-reveal="150" style="border-radius:28px;overflow:hidden;aspect-ratio:3/4;margin-top:clamp(32px,5vw,64px);border:1px solid rgba(255,255,255,.09)"><img src="f4.jpg" alt="Degradê com desenho CR18" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       </div>
       <div style="flex:1 1 380px;max-width:520px;display:flex;flex-direction:column;align-items:center;gap:20px">
-        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Sobre a CR18</p>
+        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#5B8CFF">Sobre a CR18</p>
         <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.4vw,52px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Conheça a CR18 Barbearia</h2>
         <div data-reveal="150" style="display:flex;gap:5px"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
         <p data-reveal="200" style="margin:0;font-size:17px;line-height:1.7;color:#C4C9D8;text-wrap:pretty">Localizada em Santo André, a CR18 une profissionais qualificados, atendimento de excelência e um ambiente pensado para proporcionar conforto em cada visita.</p>
         <p data-reveal="250" style="margin:0;font-size:17px;line-height:1.7;color:#fff;font-weight:600;text-wrap:pretty">Mais do que cuidar do seu cabelo e da sua barba, nosso compromisso é oferecer uma experiência que faça você querer voltar.</p>
         <div data-reveal="300" style="margin-top:8px">
-          <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.32);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+          <a href="#agendar" onClick="{{ openMain }}" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.32);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
         </div>
       </div>
     </div>
@@ -143,8 +142,8 @@ a:hover{color:#FF4D62}
 
   <section id="servicos" data-screen-label="04 Serviços" style="padding:0 20px clamp(80px,11vw,150px)">
     <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
-      <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Nossos serviços</p>
-      <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Seu estilo merece <span style="color:#FF4D62">o cuidado certo.</span></h2>
+      <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#5B8CFF">Nossos serviços</p>
+      <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Seu estilo merece <span style="color:#5B8CFF">o cuidado certo.</span></h2>
       <div data-reveal="150" style="display:flex;gap:5px;margin-top:4px"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
     </div>
     <div style="max-width:1180px;margin:clamp(40px,6vw,64px) auto 0;display:flex;flex-wrap:wrap;gap:16px">
@@ -158,7 +157,7 @@ a:hover{color:#FF4D62}
         </div>
       </div>
       <div data-reveal="150" style="flex:1 1 300px;display:flex;flex-direction:column;border-radius:32px;overflow:hidden;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
-        <div style="height:220px;position:relative"><img src="f3.jpg" alt="Barba" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%"></div>
+        <div style="height:220px;position:relative"><img src="barba.jpg" alt="Barba" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%"></div>
         <div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:32px 28px 36px">
           <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#8A90A2">02</span>
           <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Barba</h3>
@@ -186,14 +185,14 @@ a:hover{color:#FF4D62}
       </div>
     </div>
     <div data-reveal="0" style="margin-top:40px">
-      <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.32);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+      <a href="#agendar" onClick="{{ openMain }}" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.32);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
     </div>
   </section>
 
   <section id="combos" data-screen-label="05 Combos" style="padding:0 20px clamp(80px,11vw,150px)">
     <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
-      <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Combos CR18</p>
-      <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.6vw,54px);font-weight:800;line-height:1.06;letter-spacing:-.03em;text-wrap:balance">Mais cuidados para o seu visual. <span style="color:#FF4D62">Preços especiais para você.</span></h2>
+      <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#5B8CFF">Combos CR18</p>
+      <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.6vw,54px);font-weight:800;line-height:1.06;letter-spacing:-.03em;text-wrap:balance">Mais cuidados para o seu visual. <span style="color:#5B8CFF">Preços especiais para você.</span></h2>
       <p data-reveal="200" style="margin:0;max-width:560px;font-size:17px;line-height:1.65;color:#C4C9D8;text-wrap:pretty">Conheça nossos combos e aproveite diferentes serviços em um único atendimento.</p>
     </div>
     <div style="max-width:1200px;margin:clamp(40px,6vw,64px) auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:18px">
@@ -210,9 +209,9 @@ a:hover{color:#FF4D62}
         <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
           <span style="font-size:14px;color:#AEB6D6">De <s>R$ 190,90</s> por</span>
           <span style="font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.1">R$ 169,90</span>
-          <span style="margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;color:#fff;background:#E8324A;padding:6px 12px;border-radius:999px">Economize R$ 21,00</span>
+          <span style="margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;color:#fff;background:#2B50D8;padding:6px 12px;border-radius:999px">Economize R$ 21,00</span>
         </div>
-        <a href="{{ waBlack }}" target="_blank" rel="noopener" style="width:100%;display:flex;justify-content:center;align-items:center;gap:10px;background:#E8324A;color:#fff;font-weight:700;font-size:15px;padding:18px 24px;border-radius:999px;transition:background .2s" style-hover="background:#FF4459;color:#fff">Agendar meu combo <span>→</span></a>
+        <a href="#agendar" onClick="{{ openBlack }}" style="width:100%;display:flex;justify-content:center;align-items:center;gap:10px;background:#E8324A;color:#fff;font-weight:700;font-size:15px;padding:18px 24px;border-radius:999px;transition:background .2s" style-hover="background:#FF4459;color:#fff">Agendar meu combo <span>→</span></a>
       </div>
       <sc-for list="{{ combos }}" as="c" hint-placeholder-count="4">
         <div data-reveal="{{ c.delay }}" style="flex:1 1 300px;max-width:384px;display:flex;flex-direction:column;align-items:center;gap:20px;padding:40px 28px 32px;border-radius:32px;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
@@ -227,9 +226,9 @@ a:hover{color:#FF4D62}
           <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
             <span style="font-size:14px;color:#9AA0B2">De <s>R$ {{ c.de }}</s> por</span>
             <span style="font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1.1">R$ {{ c.por }}</span>
-            <span style="margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;color:#FF6375;background:rgba(232,50,74,.14);padding:6px 12px;border-radius:999px">Economize R$ {{ c.save }}</span>
+            <span style="margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;color:#8FB0FF;background:rgba(91,140,255,.16);padding:6px 12px;border-radius:999px">Economize R$ {{ c.save }}</span>
           </div>
-          <a href="{{ c.wa }}" target="_blank" rel="noopener" style="width:100%;display:flex;justify-content:center;align-items:center;gap:10px;background:transparent;color:#fff;font-weight:700;font-size:15px;padding:17px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.28);transition:background .2s, border-color .2s" style-hover="background:#E8324A;border-color:#E8324A;color:#fff">Agendar meu combo <span>→</span></a>
+          <a href="#agendar" onClick="{{ c.open }}" style="width:100%;display:flex;justify-content:center;align-items:center;gap:10px;background:transparent;color:#fff;font-weight:700;font-size:15px;padding:17px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.28);transition:background .2s, border-color .2s" style-hover="background:#E8324A;border-color:#E8324A;color:#fff">Agendar meu combo <span>→</span></a>
         </div>
       </sc-for>
     </div>
@@ -238,7 +237,7 @@ a:hover{color:#FF4D62}
   <section id="planos" data-screen-label="06 Planos" style="padding:0 clamp(8px,2vw,24px) clamp(80px,11vw,150px)">
     <div style="position:relative;overflow:hidden;border-radius:clamp(28px,4vw,48px);background:radial-gradient(90% 60% at 50% 110%,rgba(232,50,74,.35),transparent 60%),radial-gradient(110% 70% at 50% 0%,#15298a 0%,#0a1440 40%,#05070f 80%);border:1px solid rgba(255,255,255,.06);padding:clamp(64px,9vw,120px) 20px">
       <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px">
-        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#FF4D62">Planos de assinatura</p>
+        <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#5B8CFF">Planos de assinatura</p>
         <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Seu visual em dia o mês inteiro.</h2>
         <p data-reveal="200" style="margin:0;max-width:580px;font-size:17px;line-height:1.65;color:#C4C9D8;text-wrap:pretty">Conheça os planos de assinatura da CR18 e tenha mais praticidade para manter seu corte e sua barba sempre alinhados.</p>
         <div data-reveal="300" style="width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;gap:10px;margin:18px 0 6px">
@@ -248,9 +247,40 @@ a:hover{color:#FF4D62}
           <p style="margin:0;font-size:13px;color:#9AA0B8">Conforme as condições do plano.</p>
         </div>
         <div data-reveal="400" style="margin-top:10px">
-          <a href="{{ waPlanos }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Conhecer os planos <span>→</span></a>
+          <a href="#agendar" onClick="{{ openPlanos }}" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Conhecer os planos <span>→</span></a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="unidades" data-screen-label="Unidades" style="padding:0 20px clamp(80px,11vw,150px)">
+    <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px">
+      <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#5B8CFF">Nossas unidades</p>
+      <h2 data-reveal="100" style="margin:0;font-size:clamp(30px,4.8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;text-wrap:balance">Duas unidades em <span style="color:#5B8CFF">Santo André.</span></h2>
+      <div data-reveal="150" style="display:flex;gap:5px;margin-top:4px"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
+      <p data-reveal="200" style="margin:0;max-width:560px;font-size:17px;line-height:1.65;color:#C4C9D8;text-wrap:pretty">Escolha a unidade mais perto de você e veja como chegar.</p>
+    </div>
+    <div style="max-width:1180px;margin:clamp(40px,6vw,64px) auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:18px">
+      <sc-for list="{{ units }}" as="u" hint-placeholder-count="2">
+        <div data-reveal="{{ u.delay }}" style="display:flex;flex-direction:column;border-radius:32px;overflow:hidden;background:linear-gradient(165deg,#16297a 0%,#0a1236 55%,#06080f 100%);border:1px solid rgba(43,80,216,.45);box-shadow:0 30px 70px rgba(20,40,140,.25)">
+          <div style="padding:12px 12px 0">
+            <div style="position:relative;height:clamp(240px,32vw,320px);border-radius:22px;overflow:hidden;border:1px solid rgba(91,140,255,.35);background:#0a1236">
+              <iframe src="{{ u.map }}" title="{{ u.title }}" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(185deg) saturate(1.6) brightness(.92) contrast(.95)"></iframe>
+              <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(11,20,64,.25),transparent 30%,transparent 70%,rgba(6,8,15,.55))"></div>
+              <span style="position:absolute;top:14px;left:50%;transform:translateX(-50%);pointer-events:none;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#2B50D8;padding:8px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px rgba(0,0,0,.35)">Unidade {{ u.name }}</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px 24px 34px">
+            <h3 style="margin:0;font-size:clamp(24px,2.6vw,30px);font-weight:800;letter-spacing:-.02em">CR18 {{ u.name }}</h3>
+            <span style="width:40px;height:3px;background:#5B8CFF;border-radius:2px"></span>
+            <p style="margin:0;font-size:15px;color:#C9D0E6">Santo André — SP · <a href="{{ u.tel }}" style="color:#fff;font-weight:600">{{ u.phone }}</a></p>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:8px;width:100%">
+              <a href="{{ u.wa }}" target="_blank" rel="noopener" style="flex:1 1 200px;max-width:260px;display:flex;justify-content:center;align-items:center;gap:10px;background:#E8324A;color:#fff;font-weight:700;font-size:15px;padding:17px 22px;border-radius:999px;transition:background .2s" style-hover="background:#FF4459;color:#fff">Agendar nesta unidade</a>
+              <a href="{{ u.route }}" target="_blank" rel="noopener" style="flex:1 1 160px;max-width:220px;display:flex;justify-content:center;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:15px;padding:16px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.28);transition:background .2s, border-color .2s" style-hover="background:#2B50D8;border-color:#2B50D8;color:#fff">Como chegar <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </sc-for>
     </div>
   </section>
 
@@ -260,10 +290,10 @@ a:hover{color:#FF4D62}
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.82))"></div>
       <div style="position:relative;max-width:760px;display:flex;flex-direction:column;align-items:center;gap:20px">
         <div data-reveal="0" style="display:flex;gap:5px"><span style="width:22px;height:4px;background:#E8324A;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#fff;transform:skewX(-25deg)"></span><span style="width:22px;height:4px;background:#2B50D8;transform:skewX(-25deg)"></span></div>
-        <h2 data-reveal="100" style="margin:0;font-size:clamp(34px,6vw,72px);font-weight:800;line-height:1.03;letter-spacing:-.035em;text-wrap:balance">Seu próximo corte é na <span style="color:#E8324A">CR18.</span></h2>
+        <h2 data-reveal="100" style="margin:0;font-size:clamp(34px,6vw,72px);font-weight:800;line-height:1.03;letter-spacing:-.035em;text-wrap:balance">Seu próximo corte é na <span style="color:#5B8CFF">CR18.</span></h2>
         <p data-reveal="200" style="margin:0;max-width:560px;font-size:18px;line-height:1.65;color:#D4D7E0;text-wrap:pretty">Agende seu horário e conheça uma experiência de barbearia diferenciada em Santo André.</p>
         <div data-reveal="300" style="margin-top:10px">
-          <a href="{{ waMain }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+          <a href="#agendar" onClick="{{ openMain }}" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
         </div>
       </div>
     </div>
@@ -279,13 +309,34 @@ a:hover{color:#FF4D62}
       <p style="margin:36px 0 0;font-size:12px;color:#6E7486">© 2026 CR18 Barbearia. Todos os direitos reservados.</p>
     </div>
   </footer>
+<sc-if value="{{ bookOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeBook }}" style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">
+      <div onClick="{{ stop }}" role="dialog" aria-modal="true" style="position:relative;width:100%;max-width:480px;display:flex;flex-direction:column;align-items:center;gap:16px;padding:44px 24px 28px;border-radius:32px;background:radial-gradient(120% 80% at 50% 0%,#1a2f8c 0%,#0b1440 50%,#06080f 100%);border:1px solid rgba(91,140,255,.4);box-shadow:0 40px 100px rgba(0,0,0,.6)">
+        <button onClick="{{ closeBook }}" aria-label="Fechar" style="position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:16px;line-height:1;cursor:pointer;font-family:inherit">✕</button>
+        <img src="logo-crop.png" alt="CR18 Barbearia" style="height:34px;width:auto;display:block">
+        <h3 style="margin:6px 0 0;font-size:clamp(24px,5vw,30px);font-weight:800;letter-spacing:-.02em;line-height:1.15">Escolha sua <span style="color:#5B8CFF">unidade</span></h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#C4C9D8">Você será direcionado ao WhatsApp da unidade escolhida.</p>
+        <div style="width:100%;display:flex;flex-direction:column;gap:12px;margin-top:8px">
+          <sc-for list="{{ bookUnits }}" as="b" hint-placeholder-count="2">
+            <a href="{{ b.wa }}" target="_blank" rel="noopener" onClick="{{ pickUnit }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px 18px 24px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);transition:background .2s, border-color .2s" style-hover="background:rgba(43,80,216,.35);border-color:#5B8CFF;color:#fff">
+              <span style="display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left">
+                <span style="font-size:17px;font-weight:800;color:#fff">Agendar em {{ b.name }}</span>
+                <span style="font-size:13px;color:#AEB6D6">{{ b.phone }}</span>
+              </span>
+              <span style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:#E8324A;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff">→</span>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511954628549&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;appUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:45,&quot;min&quot;:15,&quot;max&quot;:120,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animação&quot;},&quot;animations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Animação&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;numItamarati&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511954628549&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;WhatsApp&quot;},&quot;numNacoes&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511948529026&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;WhatsApp&quot;},&quot;appUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:45,&quot;min&quot;:15,&quot;max&quot;:120,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animação&quot;},&quot;animations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Animação&quot;}}">
 class Component extends DCLogic {
-  state = { scrolled: false, w: typeof window !== 'undefined' ? window.innerWidth : 1200, menuOpen: false };
-  wa(msg) {
-    const n = String(this.props.whatsapp ?? '5511954628549').replace(/\D/g, '');
+  state = { scrolled: false, w: typeof window !== 'undefined' ? window.innerWidth : 1200, menuOpen: false, book: null };
+  wa(msg, num) {
+    const n = String(num ?? '5511954628549').replace(/\D/g, '');
     return `https://wa.me/${n}?text=${encodeURIComponent(msg)}`;
   }
   buildMarquee(speed) {
@@ -301,6 +352,8 @@ class Component extends DCLogic {
   }
   componentDidMount() {
     this.onScroll = () => { const s = Math.max(window.scrollY || 0, document.documentElement.scrollTop || 0, document.body.scrollTop || 0) > 24; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    this.onKey = e => { if (e.key === 'Escape' && this.state.book) this.setState({ book: null }); };
+    window.addEventListener('keydown', this.onKey);
     this.onResize = () => this.setState({ w: window.innerWidth, menuOpen: window.innerWidth < 900 && this.state.menuOpen });
     window.addEventListener('scroll', this.onScroll, { passive: true });
     document.body.addEventListener('scroll', this.onScroll, { passive: true });
@@ -321,7 +374,7 @@ class Component extends DCLogic {
       }), 0);
     }
   }
-  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); document.body.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); window.removeEventListener('scroll', this.onScroll); document.body.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
   renderVals() {
     const speed = this.props.marqueeSpeed ?? 45;
     if (this._speed !== speed) { this._speed = speed; this._marquee = this.buildMarquee(speed); }
@@ -333,19 +386,30 @@ class Component extends DCLogic {
     ];
     const mob = this.state.w < 900;
     const solid = this.state.scrolled || this.state.menuOpen;
+    const U = [
+      { name: 'Itamarati', phone: '(11) 95462-8549', num: this.props.numItamarati ?? '5511954628549', q: 'CR18 Barbearia Santo André', map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8438012964707!2d-46.502391924769015!3d-23.645764278741918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce68364b2af56d%3A0xea049287883fcb53!2sCR%C2%B418%20Barbearia%20-%20Santo%20Andr%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1792693437552!5m2!1spt-BR!2sbr' },
+      { name: 'Nações', phone: '(11) 94852-9026', num: this.props.numNacoes ?? '5511948529026', q: 'CR18 Barbearia Nações Santo André', map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.1542856234178!2d-46.505703624769346!3d-23.63464507874958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce69dcc1e4d569%3A0xd39dce77de367afe!2sCR18%20Barbearia%20-%20Na%C3%A7%C3%B5es%20-%20Santo%20Andr%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1792693465633!5m2!1spt-BR!2sbr' },
+    ];
+    const openWith = msg => e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ book: msg, menuOpen: false }); };
+    const units = U.map((u, i) => ({ ...u, delay: String(i * 150), title: 'Mapa CR18 ' + u.name,
+      tel: 'tel:+' + String(u.num).replace(/\D/g, ''),
+      wa: this.wa('Olá! Gostaria de agendar um horário na CR18 ' + u.name + '.', u.num),
+      route: 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(u.q) }));
+    const bookMsg = this.state.book || 'Olá! Gostaria de agendar um horário na CR18.';
+    const bookUnits = U.map(u => ({ name: u.name, phone: u.phone, wa: this.wa(bookMsg.replace(/CR18\.?$/, 'CR18 ' + u.name + '.').replace('na CR18.', 'na CR18 ' + u.name + '.').replace('da CR18.', 'da CR18 (' + u.name + ').'), u.num) }));
     const num = s => parseFloat(s.replace(',', '.'));
     const combos = raw.map(([n, name, items, de, por], i) => ({
       n, name, de, por, delay: String((i % 3) * 120 + 120),
       items: items.split(' + '),
       save: (num(de) - num(por)).toFixed(2).replace('.', ','),
-      wa: this.wa(`Olá! Quero agendar o ${name} na CR18.`),
+      open: openWith(`Olá! Quero agendar o ${name} na CR18.`),
     }));
     return {
       marquee: this._marquee,
       isDesktop: !mob, isMobile: mob, menuOpen: mob && this.state.menuOpen,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
-      navLinks: [{ label: 'Diferenciais', href: '#diferenciais' }, { label: 'Sobre', href: '#sobre' }, { label: 'Serviços', href: '#servicos' }, { label: 'Combos', href: '#combos' }, { label: 'Planos', href: '#planos' }],
+      navLinks: [{ label: 'Diferenciais', href: '#diferenciais' }, { label: 'Sobre', href: '#sobre' }, { label: 'Serviços', href: '#servicos' }, { label: 'Combos', href: '#combos' }, { label: 'Planos', href: '#planos' }, { label: 'Unidades', href: '#unidades' }],
       navBg: solid ? 'rgba(11,20,64,.94)' : 'transparent',
       navBorder: solid ? 'rgba(255,255,255,.08)' : 'transparent',
       navShadow: solid ? '0 10px 30px rgba(0,0,0,.45)' : 'none',
@@ -357,9 +421,13 @@ class Component extends DCLogic {
       heroMinH: mob ? 'auto' : '100svh',
       heroPad: mob ? '96px 20px 36px' : '140px 20px 96px',
       heroGap: mob ? '16px' : '22px',
-      waMain: this.wa('Olá! Gostaria de agendar um horário na CR18 Barbearia.'),
-      waBlack: this.wa('Olá! Quero agendar o Combo Black na CR18.'),
-      waPlanos: this.wa('Olá! Quero conhecer os planos de assinatura da CR18.'),
+      openMain: openWith('Olá! Gostaria de agendar um horário na CR18.'),
+      openBlack: openWith('Olá! Quero agendar o Combo Black na CR18.'),
+      openPlanos: openWith('Olá! Quero conhecer os planos de assinatura da CR18.'),
+      bookOpen: !!this.state.book, bookUnits, units,
+      closeBook: e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ book: null }); },
+      pickUnit: () => setTimeout(() => this.setState({ book: null }), 0),
+      stop: e => e.stopPropagation(),
       appUrl: this.props.appUrl || '#',
       combos,
     };
