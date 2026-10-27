@@ -22,7 +22,7 @@ html,body{margin:0;padding:0;background:#000;color:#fff;font-family:'Montserrat'
 *{box-sizing:border-box}
 a{color:#fff;text-decoration:none}
 a:hover{color:#5B8CFF}
-@keyframes cr18-marquee{from{transform:translateX(0)}to{transform:translateX(-33.3333%)}}
+@keyframes cr18-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes cr18-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
 </style>
 </helmet>
@@ -60,7 +60,7 @@ a:hover{color:#5B8CFF}
   </header>
 
   <section id="topo" data-screen-label="01 Hero" style="position:relative;min-height:{{ heroMinH }};display:flex;align-items:center;justify-content:center;padding:{{ heroPad }};overflow:hidden">
-    <img data-hero-bg="" src="hero.jpg" alt="Ambiente da CR18 Barbearia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+    <img data-hero-bg="" src="hero.jpg" fetchpriority="high" decoding="async" alt="Ambiente da CR18 Barbearia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
     <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.55) 35%,rgba(0,0,0,.78) 72%,#000 100%)"></div>
     <div style="position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 55%,rgba(20,40,120,.35),transparent 70%)"></div>
     <div style="position:relative;max-width:900px;display:flex;flex-direction:column;align-items:center;gap:{{ heroGap }}">
@@ -68,8 +68,9 @@ a:hover{color:#5B8CFF}
       <p data-reveal="100" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#fff;opacity:.85">Barbearia · Santo André — SP</p>
       <h1 data-reveal="200" style="margin:0;font-size:clamp(40px,7.2vw,88px);font-weight:800;line-height:1.02;letter-spacing:-.035em;text-wrap:balance">Sua barbearia em <span style="color:#5B8CFF">Santo André.</span></h1>
       <p data-reveal="300" style="margin:0;max-width:620px;font-size:clamp(16px,1.6vw,19px);line-height:1.65;color:#D4D7E0;text-wrap:pretty">Na CR18, você encontra profissionais qualificados, atendimento personalizado e um ambiente completo para cuidar do seu visual.</p>
-      <div data-reveal="400" style="margin-top:10px">
+      <div data-reveal="400" style="margin-top:10px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
         <a href="#agendar" onClick="{{ openMain }}" style="display:inline-flex;align-items:center;gap:12px;background:#E8324A;color:#fff;font-weight:700;font-size:16px;padding:20px 34px;border-radius:999px;box-shadow:0 14px 40px rgba(232,50,74,.38);transition:background .2s, transform .2s" style-hover="background:#FF4459;color:#fff;transform:translateY(-2px)">Agendar meu horário <span>→</span></a>
+        <a href="#agendar" onClick="{{ openApp }}" style="display:inline-flex;align-items:center;gap:12px;background:rgba(43,80,216,.18);color:#fff;font-weight:700;font-size:16px;padding:19px 32px;border-radius:999px;border:1px solid #5B8CFF;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .2s, transform .2s" style-hover="background:#2B50D8;color:#fff;transform:translateY(-2px)">Agendar direto <span>↗</span></a>
       </div>
     </div>
   </section>
@@ -97,7 +98,7 @@ a:hover{color:#5B8CFF}
           <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Uma equipe preparada para entregar cortes bem executados, com atenção aos detalhes e ao seu estilo.</p>
         </div>
         <div data-reveal="100" style="border-radius:28px;overflow:hidden;min-height:360px;position:relative;border:1px solid rgba(255,255,255,.09)">
-          <img src="f7.jpg" alt="Corte com desenho na CR18" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%">
+          <img src="img-f7.jpg" loading="lazy" decoding="async" alt="Corte com desenho na CR18" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%">
         </div>
         <div data-reveal="200" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)">
           <span style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(91,140,255,.6);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#5B8CFF">02</span>
@@ -110,7 +111,7 @@ a:hover{color:#5B8CFF}
           <p style="margin:0;font-size:15px;line-height:1.65;color:#B4BACB;text-wrap:pretty">Do agendamento à finalização, cada detalhe é pensado para oferecer praticidade e uma ótima experiência.</p>
         </div>
         <div data-reveal="100" style="border-radius:28px;overflow:hidden;min-height:360px;position:relative;border:1px solid rgba(255,255,255,.09)">
-          <img src="f1.jpg" alt="Cliente após o corte na CR18" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%">
+          <img src="img-f1.jpg" loading="lazy" decoding="async" alt="Cliente após o corte na CR18" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%">
         </div>
         <div data-reveal="200" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;border-radius:28px;background:linear-gradient(165deg,rgba(232,50,74,.16),rgba(255,255,255,.03));border:1px solid rgba(255,77,98,.3)">
           <span style="width:46px;height:46px;border-radius:50%;background:#E8324A;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff">✓</span>
@@ -124,8 +125,8 @@ a:hover{color:#5B8CFF}
   <section id="sobre" data-screen-label="03 Sobre" style="padding:clamp(80px,11vw,150px) 20px">
     <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(40px,6vw,80px)">
       <div style="flex:1 1 420px;max-width:560px;display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <div data-reveal="0" style="border-radius:28px;overflow:hidden;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.09)"><img src="f2.jpg" alt="Corte masculino CR18" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-        <div data-reveal="150" style="border-radius:28px;overflow:hidden;aspect-ratio:3/4;margin-top:clamp(32px,5vw,64px);border:1px solid rgba(255,255,255,.09)"><img src="f4.jpg" alt="Degradê com desenho CR18" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div data-reveal="0" style="border-radius:28px;overflow:hidden;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.09)"><img src="img-f2.jpg" loading="lazy" decoding="async" alt="Corte masculino CR18" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div data-reveal="150" style="border-radius:28px;overflow:hidden;aspect-ratio:3/4;margin-top:clamp(32px,5vw,64px);border:1px solid rgba(255,255,255,.09)"><img src="img-f4.jpg" loading="lazy" decoding="async" alt="Degradê com desenho CR18" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       </div>
       <div style="flex:1 1 380px;max-width:520px;display:flex;flex-direction:column;align-items:center;gap:20px">
         <p data-reveal="0" style="margin:0;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#5B8CFF">Sobre a CR18</p>
@@ -148,7 +149,7 @@ a:hover{color:#5B8CFF}
     </div>
     <div style="max-width:1180px;margin:clamp(40px,6vw,64px) auto 0;display:flex;flex-wrap:wrap;gap:16px">
       <div data-reveal="0" style="flex:2 1 520px;display:flex;flex-wrap:wrap;border-radius:32px;overflow:hidden;background:linear-gradient(160deg,#16297a 0%,#0a1236 55%,#06080f 100%);border:1px solid rgba(43,80,216,.45)">
-        <div style="flex:1 1 240px;min-height:300px;position:relative"><img src="f5.jpg" alt="Corte masculino" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%"></div>
+        <div style="flex:1 1 240px;min-height:300px;position:relative"><img src="img-f5.jpg" loading="lazy" decoding="async" alt="Corte masculino" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%"></div>
         <div style="flex:1 1 260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:44px 32px">
           <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#9AA6D6">01</span>
           <h3 style="margin:0;font-size:clamp(24px,2.6vw,32px);font-weight:800;letter-spacing:-.02em">Corte masculino</h3>
@@ -157,7 +158,7 @@ a:hover{color:#5B8CFF}
         </div>
       </div>
       <div data-reveal="150" style="flex:1 1 300px;display:flex;flex-direction:column;border-radius:32px;overflow:hidden;background:#0A0A0E;border:1px solid rgba(255,255,255,.09)">
-        <div style="height:220px;position:relative"><img src="barba.jpg" alt="Barba" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%"></div>
+        <div style="height:220px;position:relative"><img src="img-barba.jpg" loading="lazy" decoding="async" alt="Barba" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%"></div>
         <div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:32px 28px 36px">
           <span style="font-size:13px;font-weight:600;letter-spacing:.2em;color:#8A90A2">02</span>
           <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Barba</h3>
@@ -305,7 +306,7 @@ a:hover{color:#5B8CFF}
       <p style="margin:0;font-size:18px;font-weight:700">CR18 Barbearia</p>
       <p style="margin:0;font-size:15px;color:#B4BACB">Seu estilo, nosso compromisso.</p>
       <p style="margin:0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8A90A2">Santo André — SP</p>
-      <a href="{{ appUrl }}" target="_blank" rel="noopener" style="margin-top:14px;display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:15px;padding:17px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.28);transition:background .2s, border-color .2s" style-hover="background:#E8324A;border-color:#E8324A;color:#fff">Agendar pelo aplicativo <span>→</span></a>
+      <a href="#agendar" onClick="{{ openApp }}" style="margin-top:14px;display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:15px;padding:17px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.28);transition:background .2s, border-color .2s" style-hover="background:#E8324A;border-color:#E8324A;color:#fff">Agendar pelo aplicativo <span>→</span></a>
       <p style="margin:36px 0 0;font-size:12px;color:#6E7486">© 2026 CR18 Barbearia. Todos os direitos reservados.</p>
     </div>
   </footer>
@@ -315,13 +316,13 @@ a:hover{color:#5B8CFF}
         <button onClick="{{ closeBook }}" aria-label="Fechar" style="position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:16px;line-height:1;cursor:pointer;font-family:inherit">✕</button>
         <img src="logo-crop.png" alt="CR18 Barbearia" style="height:34px;width:auto;display:block">
         <h3 style="margin:6px 0 0;font-size:clamp(24px,5vw,30px);font-weight:800;letter-spacing:-.02em;line-height:1.15">Escolha sua <span style="color:#5B8CFF">unidade</span></h3>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#C4C9D8">Você será direcionado ao WhatsApp da unidade escolhida.</p>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#C4C9D8">{{ bookSub }}</p>
         <div style="width:100%;display:flex;flex-direction:column;gap:12px;margin-top:8px">
           <sc-for list="{{ bookUnits }}" as="b" hint-placeholder-count="2">
             <a href="{{ b.wa }}" target="_blank" rel="noopener" onClick="{{ pickUnit }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px 18px 24px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);transition:background .2s, border-color .2s" style-hover="background:rgba(43,80,216,.35);border-color:#5B8CFF;color:#fff">
               <span style="display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left">
                 <span style="font-size:17px;font-weight:800;color:#fff">Agendar em {{ b.name }}</span>
-                <span style="font-size:13px;color:#AEB6D6">{{ b.phone }}</span>
+                <span style="font-size:13px;color:#AEB6D6">{{ b.sub }}</span>
               </span>
               <span style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:#E8324A;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff">→</span>
             </a>
@@ -332,7 +333,7 @@ a:hover{color:#5B8CFF}
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;numItamarati&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511954628549&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;WhatsApp&quot;},&quot;numNacoes&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511948529026&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;WhatsApp&quot;},&quot;appUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:45,&quot;min&quot;:15,&quot;max&quot;:120,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animação&quot;},&quot;animations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Animação&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;numItamarati&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511954628549&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;WhatsApp&quot;},&quot;numNacoes&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511948529026&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;WhatsApp&quot;},&quot;appItamarati&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://sites.appbarber.com.br/cr18barbearia-7at8&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;App Barber&quot;},&quot;appNacoes&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://sites.appbarber.com.br/cr18barbeariana-anbp&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;App Barber&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:45,&quot;min&quot;:15,&quot;max&quot;:120,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animação&quot;},&quot;animations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Animação&quot;}}">
 class Component extends DCLogic {
   state = { scrolled: false, w: typeof window !== 'undefined' ? window.innerWidth : 1200, menuOpen: false, book: null };
   wa(msg, num) {
@@ -341,19 +342,27 @@ class Component extends DCLogic {
   }
   buildMarquee(speed) {
     const h = React.createElement;
-    const card = (n, k) => h('div', { key: k, style: { flex: '0 0 auto', width: 'clamp(170px,20vw,250px)', aspectRatio: '9/16', marginRight: 16, borderRadius: 24, overflow: 'hidden', background: '#0b0b10', border: '1px solid rgba(255,255,255,.09)' } },
-      h('video', { src: `v${n}.mp4`, autoPlay: true, loop: true, playsInline: true, muted: true, preload: 'auto',
-        ref: el => { if (el && !el._cr) { el._cr = 1; el.muted = true; el.defaultMuted = true; el.setAttribute('muted', ''); const p = el.play && el.play(); p && p.catch && p.catch(() => {}); } },
-        style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block', pointerEvents: 'none' } }));
-    const items = [];
-    for (let s = 0; s < 3; s++) for (let n = 1; n <= 6; n++) items.push(card(n, s + '-' + n));
+    const mount = el => {
+      if (!el || el._cr) return; el._cr = 1;
+      let html = '';
+      for (let k = 0; k < 2; k++) for (let n = 1; n <= 6; n++) html += '<div style="flex:0 0 auto;width:clamp(170px,20vw,250px);aspect-ratio:9/16;margin-right:16px;border-radius:24px;overflow:hidden;background:#0b0b10 url(p' + n + '.jpg) center/cover;border:1px solid rgba(255,255,255,.09)"><video src="v' + n + '.mp4" poster="p' + n + '.jpg" muted autoplay loop playsinline webkit-playsinline disablepictureinpicture preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none"></video></div>';
+      el.innerHTML = html;
+      this._vids = Array.from(el.querySelectorAll('video'));
+      this._vids.forEach(v => { v.muted = true; v.defaultMuted = true; v.playsInline = true; });
+      this.playVids();
+    };
     return h('div', { style: { overflow: 'hidden', width: '100%' } },
-      h('div', { style: { display: 'flex', width: 'max-content', animation: `cr18-marquee ${speed}s linear infinite` } }, items));
+      h('div', { ref: mount, style: { display: 'flex', width: 'max-content', animation: `cr18-marquee ${speed}s linear infinite`, willChange: 'transform' } }));
   }
+  playVids() { (this._vids || []).forEach(v => { if (v.paused) { const p = v.play(); p && p.catch && p.catch(() => {}); } }); }
   componentDidMount() {
     this.onScroll = () => { const s = Math.max(window.scrollY || 0, document.documentElement.scrollTop || 0, document.body.scrollTop || 0) > 24; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
     this.onKey = e => { if (e.key === 'Escape' && this.state.book) this.setState({ book: null }); };
     window.addEventListener('keydown', this.onKey);
+    this.kick = () => this.playVids();
+    ['touchstart', 'scroll', 'click'].forEach(ev => window.addEventListener(ev, this.kick, { passive: true }));
+    document.addEventListener('visibilitychange', this.kick);
+    this.kickT = setInterval(this.kick, 2000);
     this.onResize = () => this.setState({ w: window.innerWidth, menuOpen: window.innerWidth < 900 && this.state.menuOpen });
     window.addEventListener('scroll', this.onScroll, { passive: true });
     document.body.addEventListener('scroll', this.onScroll, { passive: true });
@@ -374,7 +383,7 @@ class Component extends DCLogic {
       }), 0);
     }
   }
-  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); window.removeEventListener('scroll', this.onScroll); document.body.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); ['touchstart', 'scroll', 'click'].forEach(ev => window.removeEventListener(ev, this.kick)); document.removeEventListener('visibilitychange', this.kick); clearInterval(this.kickT); window.removeEventListener('scroll', this.onScroll); document.body.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
   renderVals() {
     const speed = this.props.marqueeSpeed ?? 45;
     if (this._speed !== speed) { this._speed = speed; this._marquee = this.buildMarquee(speed); }
@@ -395,8 +404,10 @@ class Component extends DCLogic {
       tel: 'tel:+' + String(u.num).replace(/\D/g, ''),
       wa: this.wa('Olá! Gostaria de agendar um horário na CR18 ' + u.name + '.', u.num),
       route: 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(u.q) }));
-    const bookMsg = this.state.book || 'Olá! Gostaria de agendar um horário na CR18.';
-    const bookUnits = U.map(u => ({ name: u.name, phone: u.phone, wa: this.wa(bookMsg.replace(/CR18\.?$/, 'CR18 ' + u.name + '.').replace('na CR18.', 'na CR18 ' + u.name + '.').replace('da CR18.', 'da CR18 (' + u.name + ').'), u.num) }));
+    const isApp = this.state.book === 'app';
+    const apps = { 'Itamarati': this.props.appItamarati || 'https://sites.appbarber.com.br/cr18barbearia-7at8', 'Nações': this.props.appNacoes || 'https://sites.appbarber.com.br/cr18barbeariana-anbp' };
+    const bookMsg = (!isApp && this.state.book) || 'Olá! Gostaria de agendar um horário na CR18.';
+    const bookUnits = U.map(u => ({ name: u.name, sub: isApp ? 'Agendamento online pelo App Barber' : 'WhatsApp ' + u.phone, wa: isApp ? apps[u.name] : this.wa(bookMsg.replace(/CR18\.?$/, 'CR18 ' + u.name + '.').replace('na CR18.', 'na CR18 ' + u.name + '.').replace('da CR18.', 'da CR18 (' + u.name + ').'), u.num) }));
     const num = s => parseFloat(s.replace(',', '.'));
     const combos = raw.map(([n, name, items, de, por], i) => ({
       n, name, de, por, delay: String((i % 3) * 120 + 120),
@@ -425,10 +436,11 @@ class Component extends DCLogic {
       openBlack: openWith('Olá! Quero agendar o Combo Black na CR18.'),
       openPlanos: openWith('Olá! Quero conhecer os planos de assinatura da CR18.'),
       bookOpen: !!this.state.book, bookUnits, units,
+      openApp: openWith('app'),
+      bookSub: isApp ? 'Escolha a unidade e agende direto pelo aplicativo, sem esperar resposta.' : 'Você será direcionado ao WhatsApp da unidade escolhida.',
       closeBook: e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ book: null }); },
       pickUnit: () => setTimeout(() => this.setState({ book: null }), 0),
       stop: e => e.stopPropagation(),
-      appUrl: this.props.appUrl || '#',
       combos,
     };
   }
